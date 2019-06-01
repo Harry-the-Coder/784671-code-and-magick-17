@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Denis Bukharev](https://up.htmlacademy.ru/javascript/17/user/784671).
-* Наставник: `Неизвестно`.
+* Наставник: [Nikolay Dumchev](https://htmlacademy.ru/profile/nikopol_fw).
 
 ---
 
