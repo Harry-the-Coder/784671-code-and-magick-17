@@ -11,8 +11,6 @@ var FONT_GAP = 16;
 var BAR_GAP = 50;
 var BAR_WIDTH = 40;
 var BAR_HEIGHT = -150;
-var names = ['Вы', 'Крекс', 'Пекс', 'ЗИЛИБОБА'];
-var scores = [100500, 80000, 50000, 90000.99];
 var textForWinner = ['Ура вы победили!', 'Список результатов:'];
 
 var renderCloud = function (ctx, x, y, width, height, color) {
@@ -42,8 +40,6 @@ var getMaxElement = function (times) {
 
 var getRandomOpacity = function () {
   var a = Math.random();
-  a.toString;
-
   return 'rgba' + '(' + '0,' + '0,' + '159,' + a + ')';
 };
 
