@@ -39,7 +39,7 @@ var getMaxElement = function (times) {
 };
 
 var getRandomOpacity = function () {
-  var a = Math.random(0.1, 1);
+  var a = Math.random() + 0.1;
   return 'rgba' + '(' + '0,' + '0,' + '159,' + a + ')';
 };
 
