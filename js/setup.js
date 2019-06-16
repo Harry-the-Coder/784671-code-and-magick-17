@@ -51,7 +51,8 @@ userDialog.classList.remove('hidden');
 document.querySelector('.setup-similar').classList.remove('hidden');
 
 // Функция для получения рандомного значения с каждого массива
-var getRandomPoints = function() {
+
+var getRandomPoints = function () {
   var randomPoints = [];
   for (var b = 0; b < allMagesData.length; b++) {
     var rand = Math.floor(Math.random() * allMagesData[b].length);
@@ -74,7 +75,8 @@ var getWizardList = function () {
 };
 
 // Отрисовывает все штуки
-var createSimilarWizards = function() {
+
+var createSimilarWizards = function () {
   for (var i = 0; i < getWizardList().length; i++) {
     var wizardElement = similarWizardTemplate.cloneNode(true);
     wizardElement.querySelector('.setup-similar-label').textContent = getWizardList()[i].name;
@@ -85,11 +87,3 @@ var createSimilarWizards = function() {
 };
 
 createSimilarWizards();
-
-
-
-
-
-
-
-
