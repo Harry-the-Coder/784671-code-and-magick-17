@@ -36,39 +36,29 @@ var eyeColors = [
   'green'
 ];
 
-var allMagesData = [
-  namesOfMages,
-  surnamesOfMages,
-  coatColors,
-  eyeColors]
-;
-
 var userDialog = document.querySelector('.setup');
 var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 
-userDialog.classList.remove('hidden');
-document.querySelector('.setup-similar').classList.remove('hidden');
-
 // Функция для получения рандомного значения с каждого массива
 
-var getRandomPoints = function () {
-  var randomPoints = [];
-  for (var b = 0; b < allMagesData.length; b++) {
-    var rand = Math.floor(Math.random() * allMagesData[b].length);
-    randomPoints[b] = rand;
-  }
-  return randomPoints;
+var getRandomPoint = function (currentArray) {
+  var rand = Math.floor(Math.random() * currentArray.length);
+  return rand;
 };
 
 // Функция которая формирует массив объектов магов со случайными свойствами
 var getWizardList = function () {
   var wizardList = [];
+  var currentName;
+  var currentSurname;
   for (var i = 0; i < 4; i++) {
+    currentName = namesOfMages[getRandomPoint(namesOfMages)];
+    currentSurname = surnamesOfMages[getRandomPoint(surnamesOfMages)];
     wizardList.push({
-      name: allMagesData[0][getRandomPoints()[0]] + ' ' + allMagesData[1][getRandomPoints()[1]],
-      coatColor: allMagesData[2][getRandomPoints()[2]],
-      eyeColor: allMagesData[3][getRandomPoints()[3]]
+      name: currentName + ' ' + currentSurname,
+      coatColor: coatColors[getRandomPoint(coatColors)],
+      eyeColor: eyeColors[getRandomPoint(eyeColors)]
     });
   }
   return wizardList;
@@ -87,3 +77,5 @@ var createSimilarWizards = function () {
 };
 
 createSimilarWizards();
+userDialog.classList.remove('hidden');
+document.querySelector('.setup-similar').classList.remove('hidden');
